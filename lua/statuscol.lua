@@ -246,9 +246,10 @@ function M.setup(user)
 						signsegments[signsegmentcount] = ss
 						ss.namecount = #ss.name
 						ss.auto = ss.auto or false
+						ss.padstart = ss.padstart or " "
 						ss.padwidth = ss.maxwidth or 1
 						ss.colwidth = ss.colwidth or 2
-						ss.empty = (" "):rep(ss.maxwidth * ss.colwidth)
+						ss.empty = ss.padstart .. (" "):rep(math.min(0, (ss.maxwidth * ss.colwidth) - 1))
 						o.signcolumn = "no"
 					end
 				else
