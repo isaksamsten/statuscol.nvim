@@ -249,7 +249,7 @@ function M.setup(user)
 						ss.padstart = ss.padstart or " "
 						ss.padwidth = ss.maxwidth or 1
 						ss.colwidth = ss.colwidth or 2
-						ss.empty = ss.padstart .. (" "):rep(ss.maxwidth * ss.colwidth)
+						ss.empty = ss.padstart .. (" "):rep((ss.maxwidth * ss.colwidth) - 1)
 						o.signcolumn = "no"
 					end
 				else
